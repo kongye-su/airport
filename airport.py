@@ -87,6 +87,7 @@ class Airport:
                 "code": "0"}
         res_json = self.post_json(register_url, data=data)
         if res_json['ret'] == 1:
+            self.post_json("https://ssru8.icu/user/checkin")
             user_url = "https://ssru8.icu/user"
             res = self.get_html(user_url)
             result = re.search(r"link/([a-zA-Z1-9]+)\?", res.text)
