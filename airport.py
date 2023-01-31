@@ -11,7 +11,7 @@ class Airport:
         self.name = self.random_name()
 
     def start(self):
-        # self.speed_cat()
+        self.speed_cat()
         self.ssru8()
 
     def get_json(self, url, params=None):
