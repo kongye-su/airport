@@ -11,9 +11,9 @@ class Airport:
         self.name = self.random_name()
 
     def start(self):
-        self.speed_cat()
+        # self.speedcat()
         # self.ssru8()
-        # self.fastlink()
+        self.fastlink()
 
     def get_json(self, url, params=None):
         return self.sess.get(url, params=params).json()
@@ -46,7 +46,7 @@ class Airport:
         name = "".join([random.choice(names) for _ in range(length)])
         return name
 
-    def speed_cat(self):
+    def speedcat(self):
         # 3天5G流量
         register_url = "https://aff03.speedcat-aff02.com/auth/register"
         data = {"email": self.email,
